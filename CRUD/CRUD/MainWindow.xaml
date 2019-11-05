@@ -1,0 +1,39 @@
+﻿<Window x:Class="CRUD.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CRUD"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="619" Width="598" Background="Beige">
+    <Grid Margin="0,0,5,-41" RenderTransformOrigin="0.5,0.5">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="0.216"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <TextBox HorizontalAlignment="Left" Height="31" Margin="214,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227" Name="txtNombre"/>
+        <TextBox HorizontalAlignment="Left" Height="31" Margin="214,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227" Name="txtApellido"/>
+        <TextBox HorizontalAlignment="Left" Height="85" Margin="214,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227" Name="txtDireccion"/>
+        <ComboBox FontSize="20" Name="cbGenero" Margin="214,169,118,419">
+            <ComboBoxItem Content="Selecciona Genero" Selector.IsSelected="True"/>
+            <ComboBoxItem Content="Masculino" />
+            <ComboBoxItem Content="Femenino" />
+            <ComboBoxItem Content="Prefiero no especificar" />
+        </ComboBox>
+        <Label Content="Nombre:" HorizontalAlignment="Left" Height="34" Margin="79,86,0,0" VerticalAlignment="Top" Width="119"/>
+        <Label Content="Apellido:" HorizontalAlignment="Left" Height="34" Margin="79,130,0,0" VerticalAlignment="Top" Width="119"/>
+        <Label Content="Genero:" HorizontalAlignment="Left" Height="34" Margin="79,176,0,0" VerticalAlignment="Top" Width="119"/>
+        <Label Content="Dirección:" HorizontalAlignment="Left" Height="34" Margin="79,225,0,0" VerticalAlignment="Top" Width="119"/>
+        <Button Content="Nuevo" HorizontalAlignment="Left" Margin="65,466,0,0" VerticalAlignment="Top" Width="77" RenderTransformOrigin="0.36,1.25" Height="40" Background="DarkRed" Click="Button_Click_1"/>
+        <Button Content="Editar" HorizontalAlignment="Left" Margin="161,466,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.36,1.25" Height="40" Click="Button_Click" Background="DarkBlue"/>
+        <Button Content="Borrar" HorizontalAlignment="Left" Margin="253,466,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.36,1.25" Height="40" Background="DarkGreen" Click="Button_Click_2"/>
+        <Button Content="Salir" HorizontalAlignment="Left" Margin="442,466,0,0" VerticalAlignment="Top" Width="77" RenderTransformOrigin="0.36,1.25" Height="40" Background="DarkMagenta" Click="Button_Click_4"/>
+        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="345,466,0,0" VerticalAlignment="Top" Width="77" RenderTransformOrigin="0.36,1.25" Height="40" Background="DarkGoldenrod" Click="Button_Click_3"/>
+        <Button Content="Buscar" HorizontalAlignment="Left" Margin="251,524,0,0" VerticalAlignment="Top" Width="77" RenderTransformOrigin="0.36,1.25" Height="40" Background="DarkOliveGreen" Click="Button_Click_5"/>
+        <DataGrid HorizontalAlignment="Left" Height="100" Margin="168,327,0,0" VerticalAlignment="Top" Width="273" Background="DarkBlue" Name="pngrid" ItemsSource="{Binding}"/>
+    </Grid>
+</Window>

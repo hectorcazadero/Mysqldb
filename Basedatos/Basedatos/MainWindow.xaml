@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Basedatos"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="TeamoAngy" Height="364.5" Width="410" Background="LemonChiffon">
+    <Grid Margin="-20,0,2,16">
         <Label Content="Servidor:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="94,56,0,0"/>
         <Label Content="Puerto:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="95,113,0,0"/>
         <Label Content="Usuario:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="95,162,0,0" RenderTransformOrigin="0.5,0.5"/>
