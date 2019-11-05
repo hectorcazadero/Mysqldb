@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Vers2.Clases;
+using SQLite;
 
 namespace Vers2
 {
@@ -23,6 +25,26 @@ namespace Vers2
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnGuardar_Click(object sender, RoutedEventArgs e)
+        {
+            Contactos contacto = new Contactos()
+            {
+                Nombre = txtNombre.Text,
+                Correo = txtCorreo.Text,
+                Telefono = txtTelefono.Text
+
+            };
+            using (SQLiteConnection conexion = 
+                new SQLiteConnection(App.databasePath))
+            {
+                conexion.CreateTable<Contactos>();
+                conexion.Insert(contacto);
+            }
+            Close();
+
+
         }
     }
 }
