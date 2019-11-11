@@ -49,7 +49,8 @@ namespace Vers2
 
         private void Eliminar_Click(object sender, RoutedEventArgs e)
         {
-
+            Vers2.EliminarDatos form = new Vers2.EliminarDatos();
+            form.ShowDialog();
         }
     }
 }

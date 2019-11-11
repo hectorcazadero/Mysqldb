@@ -43,8 +43,6 @@ namespace Vers2
                 conexion.Insert(contacto);
             }
             Close();
-
-
         }
     }
 }
