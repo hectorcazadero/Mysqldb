@@ -27,6 +27,7 @@ namespace Vers2
             InitializeComponent();
         }
 
+
         private void btnGuardar_Click(object sender, RoutedEventArgs e)
         {
             Contactos contacto = new Contactos()
@@ -43,6 +44,14 @@ namespace Vers2
                 conexion.Insert(contacto);
             }
             Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            txtNombre.Text = "";
+            txtCorreo.Text = "";
+            txtTelefono.Text = "";
+
         }
     }
 }

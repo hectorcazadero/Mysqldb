@@ -17,23 +17,25 @@ using SQLite;
 namespace Vers2
 {
     /// <summary>
-    /// Lógica de interacción para EliminarDatos.xaml
+    /// Lógica de interacción para Window2.xaml
     /// </summary>
-    public partial class EliminarDatos : Window
+    public partial class Window2 : Window
     {
-
-        public EliminarDatos()
+        public Window2()
         {
             InitializeComponent();
         }
-       
 
-        private void btnEliminar_Click(object sender, RoutedEventArgs e)
+        private void btnGuardar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnEditar_Click(object sender, RoutedEventArgs e)
         {
             using (SQLiteConnection conexion = new SQLiteConnection(App.databasePath))
             {
-                string sentenciaSQL = "delete from contactos where Nombre='" + txtNombre + "'";
-                conexion.Execute(sentenciaSQL);
+                
             }
             Close();
         }

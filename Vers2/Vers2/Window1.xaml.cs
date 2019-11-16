@@ -22,6 +22,7 @@ namespace Vers2
     public partial class Window1 : Window
     {
         List<Contactos> contactos;
+
         public Window1()
         {
             InitializeComponent();
@@ -51,6 +52,18 @@ namespace Vers2
         {
             Vers2.EliminarDatos form = new Vers2.EliminarDatos();
             form.ShowDialog();
+        }
+
+        private void Editar_Click(object sender, RoutedEventArgs e)
+        {
+            Vers2.Window2 form = new Vers2.Window2();
+            form.ShowDialog();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+
         }
     }
 }

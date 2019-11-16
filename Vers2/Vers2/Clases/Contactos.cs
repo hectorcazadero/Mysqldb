@@ -17,8 +17,7 @@ namespace Vers2.Clases
         public string Telefono { get; set; }
         public override string ToString()
         {
-            return $"{Nombre} - {Correo} - {Telefono}";
-                
+            return $"{Nombre} - {Correo} - {Telefono}";   
 
         }
     }
